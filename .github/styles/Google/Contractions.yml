@@ -1,7 +1,7 @@
 extends: substitution
 message: "Feel free to use '%s' instead of '%s'."
 link: 'https://developers.google.com/style/contractions'
-level: suggestion
+level: error
 ignorecase: true
 action:
   name: replace

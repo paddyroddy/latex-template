@@ -2,6 +2,6 @@ extends: existence
 message: "Use parentheses judiciously."
 link: 'https://developers.google.com/style/parentheses'
 nonword: true
-level: suggestion
+level: error
 tokens:
   - '\(.+\)'

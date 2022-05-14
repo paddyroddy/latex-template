@@ -1,7 +1,7 @@
 ---
 extends: substitution
 message: Use '%s' instead of '%s.'
-level: suggestion
+level: error
 ignorecase: true
 swap:
   it is: it's

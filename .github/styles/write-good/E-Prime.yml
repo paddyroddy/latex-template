@@ -1,7 +1,7 @@
 extends: existence
 message: "Try to avoid using '%s'."
 ignorecase: true
-level: suggestion
+level: error
 tokens:
   - am
   - are
