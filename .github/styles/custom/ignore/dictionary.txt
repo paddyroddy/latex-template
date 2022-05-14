@@ -1,0 +1,7 @@
+fontenc
+inputenc
+lmodern
+maketitle
+microtype
+notitlepage
+usepackage
