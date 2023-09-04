@@ -11,7 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout source
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Run chktex
               uses: xu-cheng/texlive-action/full@v1
@@ -26,7 +26,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: checkout source
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
 
         - name: set up python
           uses: actions/setup-python@v4
@@ -63,7 +63,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout source
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Run Vale
               uses: errata-ai/vale-action@v2
@@ -78,7 +78,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout source
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Build PDF
               uses: xu-cheng/texlive-action/full@v1
@@ -99,7 +99,7 @@ jobs:
         needs: compile-latex
         steps:
             - name: checkout source
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Download artefacts
               uses: actions/download-artifact@v3
