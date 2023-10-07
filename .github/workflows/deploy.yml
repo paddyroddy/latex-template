@@ -15,8 +15,9 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Run chktex
-              uses: xu-cheng/texlive-action/full@v2
+              uses: xu-cheng/texlive-action@v2
               with:
+                  scheme: full
                   run: |
                       for file in *.tex; do \
                       echo $file; \
@@ -82,8 +83,9 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Build PDF
-              uses: xu-cheng/texlive-action/full@v2
+              uses: xu-cheng/texlive-action@v2
               with:
+                  scheme: full
                   run: |
                       latexmk -quiet
 
