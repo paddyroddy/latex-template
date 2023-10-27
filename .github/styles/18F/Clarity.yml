@@ -1,6 +1,6 @@
 ---
 extends: substitution
-message: '%s'
+message: "%s"
 level: error
 ignorecase: true
 swap:
