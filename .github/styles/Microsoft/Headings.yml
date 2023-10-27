@@ -5,7 +5,7 @@ level: error
 scope: heading
 match: $sentence
 indicators:
-  - ':'
+  - ":"
 exceptions:
   - Azure
   - CLI
