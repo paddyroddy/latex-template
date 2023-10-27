@@ -8,92 +8,37 @@ on:
   pull_request:
 
 jobs:
-    chktex:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout source
-              uses: actions/checkout@v4
+  chktex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: paddyroddy/.github/actions/latex/chktex@v0.10.0
 
-            - name: Run chktex
-              uses: xu-cheng/texlive-action@v2
-              with:
-                  scheme: full
-                  run: |
-                      for file in *.tex; do \
-                      echo $file; \
-                      chktex $file | tee /dev/stderr | (! grep -q ^); \
-                      done
+  vale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: paddyroddy/.github/actions/latex/vale@v0.10.0
 
-    vale:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout source
-              uses: actions/checkout@v4
+  compile-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: paddyroddy/.github/actions/latex/compile@v0.10.0
 
-            - name: Run Vale
-              uses: errata-ai/vale-action@v2
-              env:
-                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-              with:
-                  fail_on_error: true
-                  filter_mode: nofilter
-                  reporter: github-check
+      - name: Upload artefacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artefacts
+          path: "*.pdf"
+          if-no-files-found: error
 
-    compile-latex:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout source
-              uses: actions/checkout@v4
+  upload-to-dropbox:
+    runs-on: ubuntu-latest
+    needs: compile-latex
+    steps:
+      - name: Download artefacts
+        uses: actions/download-artifact@v3
+        with:
+          name: artefacts
 
-            - name: Build PDF
-              uses: xu-cheng/texlive-action@v2
-              with:
-                  scheme: full
-                  run: |
-                      latexmk -quiet
-
-            - name: Upload artefacts
-              uses: actions/upload-artifact@v3
-              with:
-                  name: artefacts
-                  path: |
-                      *.pdf
-                  if-no-files-found: error
-
-    upload-to-dropbox:
-        runs-on: ubuntu-latest
-        needs: compile-latex
-        steps:
-            - name: checkout source
-              uses: actions/checkout@v4
-
-            - name: Download artefacts
-              uses: actions/download-artifact@v3
-              with:
-                  name: artefacts
-
-            - name: Set up Dropbox
-              run: |
-                  echo "CONFIGFILE_VERSION=$CONFIGFILE_VERSION" > ~/.dropbox_uploader
-                  echo "OAUTH_APP_KEY=$OAUTH_APP_KEY" >> ~/.dropbox_uploader
-                  echo "OAUTH_APP_SECRET=$OAUTH_APP_SECRET" >> ~/.dropbox_uploader
-                  echo "OAUTH_REFRESH_TOKEN=$OAUTH_REFRESH_TOKEN" >> ~/.dropbox_uploader
-              env:
-                  CONFIGFILE_VERSION: ${{secrets.CONFIGFILE_VERSION}}
-                  OAUTH_APP_KEY: ${{secrets.OAUTH_APP_KEY}}
-                  OAUTH_APP_SECRET: ${{secrets.OAUTH_APP_SECRET}}
-                  OAUTH_REFRESH_TOKEN: ${{secrets.OAUTH_REFRESH_TOKEN}}
-
-            - name: Retieve Dropbox uploader script
-              run: |
-                curl "https://raw.githubusercontent.com/andreafabrizi/\
-                Dropbox-Uploader/master/dropbox_uploader.sh" \
-                -o dropbox_uploader.sh
-                chmod +x dropbox_uploader.sh
-
-            - name: Upload PDF
-              run: |
-                  for file in *.pdf; do \
-                  echo $file; \
-                  ./dropbox_uploader.sh upload $file $file; \
-                  done
+      - uses: paddyroddy/.github/actions/dropbox@v0.10.0
+        with:
+          files-to-upload: $(find . -maxdepth 1 -name '*.pdf' -print)
