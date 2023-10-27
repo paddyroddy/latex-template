@@ -16,7 +16,9 @@ jobs:
   vale:
     runs-on: ubuntu-latest
     steps:
-      - uses: paddyroddy/.github/actions/latex/vale@v0.10.0
+      - uses: paddyroddy/.github/actions/latex/vale@v0.13.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
   compile-latex:
     runs-on: ubuntu-latest
@@ -39,6 +41,10 @@ jobs:
         with:
           name: artefacts
 
-      - uses: paddyroddy/.github/actions/dropbox@v0.10.0
+      - uses: paddyroddy/.github/actions/dropbox@v0.13.0
         with:
+          configfile-version: ${{ secrets.CONFIGFILE_VERSION }}
           files-to-upload: $(find . -maxdepth 1 -name '*.pdf' -print)
+          oauth-app-key: ${{ secrets.OAUTH_APP_KEY }}
+          oauth-app-secret: ${{ secrets.OAUTH_APP_SECRET }}
+          oauth-refresh-token: ${{ secrets.OAUTH_REFRESH_TOKEN }}
