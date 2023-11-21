@@ -4,8 +4,8 @@ Template for latex development
 
 [![thesis PDF](https://img.shields.io/badge/template-PDF-blue.svg)](https://www.dropbox.com/s/mi1wmdi6grji15x/template.pdf?dl=0)
 [![deploy](https://github.com/paddyroddy/latex-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/paddyroddy/phd_thesis/actions/workflows/deploy.yml)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Renovate](https://img.shields.io/badge/renovate-enabled-orange?logo=renovatebot&logoColor=white.svg)](https://renovatebot.com)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![Renovate](https://img.shields.io/badge/renovate-enabled-orange?logo=renovatebot)](https://renovatebot.com)
 
 ## Formatting
 
