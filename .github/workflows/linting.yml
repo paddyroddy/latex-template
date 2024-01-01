@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/linting@1a3be93a5bbb79658efc285ce792da79745d9d32 # v0
+      - uses: paddyroddy/.github/actions/linting@b88546337849b87e7d52ecf0f11a60a1e668a5ae # v0
         with:
           pre-commit-config: ./.pre-commit-config.yaml
