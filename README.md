@@ -3,7 +3,7 @@
 Template for latex development
 
 [![thesis PDF](https://img.shields.io/badge/template-PDF-blue.svg)](https://www.dropbox.com/s/mi1wmdi6grji15x/template.pdf?dl=0)
-[![deploy](https://github.com/paddyroddy/latex-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/paddyroddy/phd_thesis/actions/workflows/deploy.yml)
+[![deploy](https://github.com/paddyroddy/latex-template/actions/workflows/deploy.yaml/badge.svg)](https://github.com/paddyroddy/phd_thesis/actions/workflows/deploy.yaml)
 [![Licence](https://img.shields.io/github/license/paddyroddy/latex-template)](https://github.com/paddyroddy/latex-template/blob/main/LICENCE.txt)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-orange?logo=renovatebot)](https://renovatebot.com)
