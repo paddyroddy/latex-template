@@ -9,7 +9,8 @@ action:
     - " "
     - "1"
 raw:
-  - \b(?:absolutely|most|more|less|least|very|quite|largely|extremely|increasingly|kind of|mildy|hardly|greatly|sort of)\b\s*
+  - \b(?:absolutely|most|more|less|least|very|quite|largely|extremely|increasingly|kind
+    of|mildy|hardly|greatly|sort of)\b\s*
 tokens:
   - absolute
   - adequate
