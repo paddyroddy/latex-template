@@ -14,6 +14,6 @@ jobs:
     timeout-minutes: 2
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/links@cae02393710f18f5fbacd9545d1a38f0d661758e # v0
+      - uses: paddyroddy/.github/actions/links@09285e01c1fe597f667fc839e2d3a819c61e4716 # v0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
