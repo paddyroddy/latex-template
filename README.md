@@ -6,7 +6,7 @@ Template for latex development
 [![deploy](https://github.com/paddyroddy/latex-template/actions/workflows/deploy.yaml/badge.svg)](https://github.com/paddyroddy/phd_thesis/actions/workflows/deploy.yaml)
 [![Licence](https://img.shields.io/github/license/paddyroddy/latex-template)](https://github.com/paddyroddy/latex-template/blob/main/LICENCE.txt)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
-[![Renovate](https://img.shields.io/badge/renovate-enabled-orange?logo=renovatebot)](https://renovatebot.com)
+[![Renovate](https://img.shields.io/badge/renovate-enabled-orange?logo=renovatebot)](https://docs.renovatebot.com)
 
 ## Formatting
 
