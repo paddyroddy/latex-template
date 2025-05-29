@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/latex/vale@ef8e8c4b69c12a799c90f4400a49ad1e9d3ee345 # v0
+      - uses: paddyroddy/.github/actions/vale@232a2f3869501abb249d50e311179f98830c6481 # v0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
