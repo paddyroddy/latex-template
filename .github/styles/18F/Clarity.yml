@@ -16,7 +16,7 @@ swap:
   foster: Avoid using 'foster' (unless it's children).
   impact(?:ful)?: Avoid using impact or impactful.
   incentivize: Avoid using 'incentivize.'
-  # innovative: Use words that describe the positive outcome of the innovation.
+  innovative: Use words that describe the positive outcome of the innovation.
   key: Avoid using 'key' (unless it unlocks something).
   leverage:
     Avoid using 'leverage' (unless you're using it in the financial sense).
