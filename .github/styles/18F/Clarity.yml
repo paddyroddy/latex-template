@@ -4,8 +4,8 @@ message: "%s"
 level: error
 ignorecase: true
 swap:
-  # (?:commit|pledge): >-
-  #   Be more specific — we're either doing something or we're not.
+  (?:commit|pledge): >-
+    Be more specific — we're either doing something or we're not.
   advancing: Avoid using 'advancing.'
   agenda: Avoid using 'agenda' (unless you're talking about a meeting).
   deploy:
@@ -20,8 +20,8 @@ swap:
   key: Avoid using 'key' (unless it unlocks something).
   leverage:
     Avoid using 'leverage' (unless you're using it in the financial sense).
-  # progress: "What are you actually doing?"
-  # promote: Avoid using 'promote' (unless you're talking about an ad campaign).
+  progress: "What are you actually doing?"
+  promote: Avoid using 'promote' (unless you're talking about an ad campaign).
   streamline: Avoid using 'streamline.'
   strengthening:
     Avoid using 'strengthening' (unless you're referring to bridges or other
