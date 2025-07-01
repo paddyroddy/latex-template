@@ -5,6 +5,6 @@ ignorecase: false
 level: error
 tokens:
   - XXX
-  # - FIXME
+  - FIXME
   - TODO
   - NOTE
