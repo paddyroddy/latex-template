@@ -1,13 +1,13 @@
 ---
 extends: existence
-message: "Consider removing '%s'"
+message: Consider removing '%s'
 ignorecase: true
 level: error
 tokens:
   - appear to be
   - arguably
   - as far as I know
-  - could
+  # - could
   - from my point of view
   - hopefully
   - I believe

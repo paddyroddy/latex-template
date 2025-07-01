@@ -1,3 +1,4 @@
+---
 extends: existence
 message: "'%s' is too wordy."
 ignorecase: true
@@ -14,7 +15,7 @@ tokens:
   - accrue
   - acquiesce
   - acquire
-  - additional
+  # - additional
   - adjacent to
   - adjustment
   - admissible
@@ -43,7 +44,7 @@ tokens:
   - as to
   - as yet
   - ascertain
-  - assistance
+  # - assistance
   - at the present time
   - at this time
   - attain
@@ -96,7 +97,7 @@ tokens:
   - formulate
   - have a tendency to
   - honest truth
-  - however
+  # - however
   - if and when
   - impacted
   - implement
@@ -132,7 +133,7 @@ tokens:
   - is applicable to
   - is authorized to
   - is responsible for
-  - it is
+  # - it is
   - it is essential
   - it seems that
   - it was
@@ -142,8 +143,8 @@ tokens:
   - minimize
   - minimum
   - modify
-  - monitor
-  - multiple
+  # - monitor
+  # - multiple
   - necessitate
   - nevertheless
   - not certain
@@ -163,7 +164,7 @@ tokens:
   - optimum
   - overall
   - owing to the fact that
-  - participate
+  # - participate
   - particulars
   - pass away
   - pertaining to

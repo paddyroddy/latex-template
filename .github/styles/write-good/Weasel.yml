@@ -1,3 +1,4 @@
+---
 extends: existence
 message: "'%s' is a weasel word!"
 ignorecase: true
@@ -61,7 +62,7 @@ tokens:
   - exclusively
   - extremely
   - fairly
-  - faithfully
+  # - faithfully
   - fatally
   - fiercely
   - finally
@@ -110,7 +111,7 @@ tokens:
   - loudly
   - luckily
   - madly
-  - many
+  # - many
   - mentally
   - mildly
   - monthly
@@ -121,10 +122,10 @@ tokens:
   - nervously
   - nightly
   - noisily
-  - normally
+  # - normally
   - obediently
   - occasionally
-  - only
+  # - only
   - openly
   - painfully
   - particularly
@@ -186,7 +187,7 @@ tokens:
   - tensely
   - thoughtfully
   - tightly
-  - timely
+  # - timely
   - truthfully
   - unexpectedly
   - unfortunately
