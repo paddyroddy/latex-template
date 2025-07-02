@@ -1,3 +1,4 @@
+---
 extends: existence
 message: "'%s' may be passive voice. Use active voice if you can."
 ignorecase: true
