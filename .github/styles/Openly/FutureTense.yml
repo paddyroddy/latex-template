@@ -1,11 +1,11 @@
 ---
 extends: existence
-message: "Possible future tense."
+message: Possible future tense.
 ignorecase: true
 level: error
 tokens:
   - will
-  - '[\w][ll]'
+  - "[\\w][ll]"
   - we are going
   - would-be
   - would be

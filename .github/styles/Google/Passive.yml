@@ -1,13 +1,13 @@
 ---
 extends: existence
-link: "https://developers.google.com/style/voice"
-message: "In general, use active voice instead of passive voice ('%s')."
+link: https://developers.google.com/style/voice
+message: In general, use active voice instead of passive voice ('%s').
 ignorecase: true
 level: error
 raw:
   - \b(am|are|were|being|is|been|was|be)\b\s*
 tokens:
-  - '[\w]+ed'
+  - "[\\w]+ed"
   - awoken
   - beat
   - become

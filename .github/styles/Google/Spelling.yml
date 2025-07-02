@@ -1,9 +1,9 @@
 ---
 extends: existence
-message: "In general, use American spelling instead of '%s'."
-link: "https://developers.google.com/style/spelling"
+message: In general, use American spelling instead of '%s'.
+link: https://developers.google.com/style/spelling
 ignorecase: true
 level: error
 tokens:
-  - '(?:\w+)nised?'
-  - '(?:\w+)logue'
+  - (?:\w+)nised?
+  - (?:\w+)logue
