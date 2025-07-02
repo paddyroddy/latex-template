@@ -1,3 +1,4 @@
+---
 extends: existence
 message: "'%s' is not comparable"
 ignorecase: true
@@ -7,7 +8,7 @@ action:
   params:
     - split
     - " "
-    - "1"
+    - 1
 raw:
   - \b(?:absolutely|most|more|less|least|very|quite|largely|extremely|increasingly|kind
     of|mildy|hardly|greatly|sort of)\b\s*

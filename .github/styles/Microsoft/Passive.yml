@@ -1,3 +1,4 @@
+---
 extends: existence
 message: "'%s' looks like passive voice."
 ignorecase: true
@@ -5,7 +6,7 @@ level: error
 raw:
   - \b(am|are|were|being|is|been|was|be)\b\s*
 tokens:
-  - '[\w]+ed'
+  - "[\\w]+ed"
   - awoken
   - beat
   - become

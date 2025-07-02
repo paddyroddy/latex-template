@@ -1,7 +1,7 @@
 ---
 extends: existence
-message: "Use either 'or' or 'and' in '%s'"
+message: Use either 'or' or 'and' in '%s'
 ignorecase: true
 level: error
 tokens:
-  - '\w+/\w+'
+  - \w+/\w+

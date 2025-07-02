@@ -1,7 +1,8 @@
+---
 extends: existence
-message: "Use parentheses judiciously."
-link: "https://developers.google.com/style/parentheses"
+message: Use parentheses judiciously.
+link: https://developers.google.com/style/parentheses
 nonword: true
 level: error
 tokens:
-  - '\(.+\)'
+  - \(.+\)

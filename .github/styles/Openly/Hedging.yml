@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "Consider removing '%s'"
+message: Consider removing '%s'
 ignorecase: true
 level: error
 tokens:
