@@ -15,24 +15,31 @@ concurrency:
 
 jobs:
   chktex:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/latex/chktex@d8081a80ce0003b82fc662944c69bb61db85e518 # v0
+      - uses: paddyroddy/.github/actions/latex/chktex@dca9a13d483fe335f0b9edbd08494e6e4cd3b498 # v0
 
   vale:
+    permissions:
+      contents: read
     runs-on: ubuntu-slim
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/vale@d8081a80ce0003b82fc662944c69bb61db85e518 # v0
+      - uses: paddyroddy/.github/actions/vale@dca9a13d483fe335f0b9edbd08494e6e4cd3b498 # v0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
   compile-latex:
+    permissions:
+      contents: read
+
     runs-on: ubuntu-latest
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/latex/compile@d8081a80ce0003b82fc662944c69bb61db85e518 # v0
+      - uses: paddyroddy/.github/actions/latex/compile@dca9a13d483fe335f0b9edbd08494e6e4cd3b498 # v0
 
       - name: Upload artefacts
         # yamllint disable-line rule:line-length
@@ -45,6 +52,8 @@ jobs:
   upload-to-dropbox:
     if: github.ref == 'refs/heads/main'
     needs: compile-latex
+    permissions:
+      contents: read
     runs-on: ubuntu-slim
     steps:
       - name: Download artefacts
@@ -54,10 +63,12 @@ jobs:
           name: artefacts
 
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/dropbox@d8081a80ce0003b82fc662944c69bb61db85e518 # v0
+      - uses: paddyroddy/.github/actions/dropbox@dca9a13d483fe335f0b9edbd08494e6e4cd3b498 # v0
         with:
-          configfile-version: ${{ secrets.CONFIGFILE_VERSION }}
+          # yamllint disable rule:line-length
+          configfile-version: ${{ secrets.CONFIGFILE_VERSION }} # zizmor: ignore[secrets-outside-env]
           files-to-upload: $(find . -maxdepth 1 -name '*.pdf' -print)
-          oauth-app-key: ${{ secrets.OAUTH_APP_KEY }}
-          oauth-app-secret: ${{ secrets.OAUTH_APP_SECRET }}
-          oauth-refresh-token: ${{ secrets.OAUTH_REFRESH_TOKEN }}
+          oauth-app-key: ${{ secrets.OAUTH_APP_KEY }} # zizmor: ignore[secrets-outside-env]
+          oauth-app-secret: ${{ secrets.OAUTH_APP_SECRET }} # zizmor: ignore[secrets-outside-env]
+          oauth-refresh-token: ${{ secrets.OAUTH_REFRESH_TOKEN }} # zizmor: ignore[secrets-outside-env]
+          # yamllint enable rule:line-length
