@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/latex/chktex@d7ef1ce76b6d02d7e81fe9bb3c22885c6376f986 # v0
+      - uses: paddyroddy/.github/actions/latex/chktex@d8b5e17744d755a47bf422892762841f313f3dfe # v0
 
   vale:
     permissions:
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/vale@d7ef1ce76b6d02d7e81fe9bb3c22885c6376f986 # v0
+      - uses: paddyroddy/.github/actions/vale@d8b5e17744d755a47bf422892762841f313f3dfe # v0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/latex/compile@d7ef1ce76b6d02d7e81fe9bb3c22885c6376f986 # v0
+      - uses: paddyroddy/.github/actions/latex/compile@d8b5e17744d755a47bf422892762841f313f3dfe # v0
 
       - name: Upload artefacts
         # yamllint disable-line rule:line-length
@@ -64,7 +64,7 @@ jobs:
           name: artefacts
 
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/dropbox@d7ef1ce76b6d02d7e81fe9bb3c22885c6376f986 # v0
+      - uses: paddyroddy/.github/actions/dropbox@d8b5e17744d755a47bf422892762841f313f3dfe # v0
         env:
           CONFIGFILE_VERSION: ${{ secrets.CONFIGFILE_VERSION }}
           OAUTH_APP_KEY: ${{ secrets.OAUTH_APP_KEY }}
